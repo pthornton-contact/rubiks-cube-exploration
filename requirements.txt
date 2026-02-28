@@ -1,0 +1,11 @@
+jupyterlab>=4.0
+ipykernel>=6.0
+numpy>=1.26
+scipy>=1.11
+pandas>=2.1
+matplotlib>=3.8
+seaborn>=0.13
+plotly>=5.18
+sympy>=1.12
+networkx>=3.2
+tqdm>=4.66

@@ -1,0 +1,22 @@
+services:
+  lab:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: rubiks-cube-exploration:latest
+    container_name: rubiks-cube-lab
+    working_dir: /workspace
+    ports:
+      - "8888:8888"
+    environment:
+      JUPYTER_TOKEN: ${JUPYTER_TOKEN:-rubiks}
+      PYTHONPATH: /workspace/src
+    volumes:
+      - .:/workspace:cached
+    command: >
+      jupyter lab
+      --ip=0.0.0.0
+      --no-browser
+      --ServerApp.token=${JUPYTER_TOKEN:-rubiks}
+      --ServerApp.allow_origin='*'
+      --ServerApp.root_dir=/workspace

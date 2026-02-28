@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.dist/
+.build/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Virtualenv
+.venv/
+venv/
+
+# OS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Data
+/data/
+!/data/.gitkeep
+
+# Env
+.env
